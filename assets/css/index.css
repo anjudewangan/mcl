@@ -1,0 +1,158 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#ct7 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.right-header {
+  width: 311px;
+}
+
+.font-training {
+  color: #5c6bc0;
+}
+
+.font-placement {
+  color: #ab47bc;
+}
+
+.font-tracking {
+  color: #f06292;
+}
+
+.chart-pie {
+  height: 322px;
+}
+
+.cg-map-container svg path {
+  fill: #efbb20;
+  stroke: #efbb20;
+  stroke-width: 0.25;
+}
+
+.cg-map-container svg path:hover {
+  fill: #f5db8e;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.imgContainer {
+  top: -50px;
+}
+
+.profileImg {
+  width: 111px;
+}
+
+.apexcharts-legend-text {
+  color: rgb(55, 61, 63) !important;
+}
+
+.btn-update,
+.btn-feedback {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 5px 11px;
+  width: 115px;
+}
+
+.para-confirm p {
+  line-height: 3.6 !important;
+}
+
+.badge-purple {
+  color: #6610f2;
+}
+
+.bg-purple {
+  background-color: #6610f2;
+}
+
+.profileName {
+  top: -18px;
+}
+
+.profileName h4 {
+  font-size: 24px;
+}
+
+.table tbody tr td a:active,
+.table tbody tr td a:focus,
+.table tbody tr td a:hover {
+  color: #efbb20;
+}
+
+.hide {
+  display: none;
+}
+
+.imageUploadLabel {
+  margin-bottom: 0 !important;
+}
+
+.btn-action {
+  padding: 3px 6px;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.bs4-order-tracking li {
+  list-style-type: none;
+  font-size: 11px;
+  width: 25%;
+  float: left;
+  position: relative;
+  font-weight: 500;
+  text-align: center;
+}
+
+.bs4-order-tracking li > div {
+  color: #fff;
+  width: 60px;
+  text-align: center;
+  line-height: 59px;
+  display: block;
+  font-size: 12px;
+  border-radius: 50%;
+  margin: auto;
+  height: 60px;
+}
+
+.bs4-order-tracking li:after {
+  content: "";
+  width: 150%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 30px;
+  z-index: -1;
+}
+
+.bs4-order-tracking li:first-child:after {
+  left: 50%;
+}
+
+.bs4-order-tracking li:last-child:after {
+  left: 0% !important;
+  width: 0% !important;
+}
+
+.card-timeline {
+  background-color: #fff;
+  z-index: 0;
+}
+.for-light {
+  width: 165px;
+}
