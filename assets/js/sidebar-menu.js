@@ -18,7 +18,7 @@
   // left sidebar and vertical menu
   if ($("#pageWrapper").hasClass("compact-wrapper")) {
     $(".sidebar-title").append(
-      '<div class="according-menu"><i class="fa fa-angle-right"></i></div>'
+      // '<div class="according-menu"><i class="fa fa-angle-right"></i></div>'
     );
     $(".sidebar-title").on("click", function () {
       $(".sidebar-title")

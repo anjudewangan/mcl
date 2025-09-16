@@ -5,7 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../assets/images/logoIcon/cclDark.png" type="image/x-icon" id="faviconTag">
+    <!-- meta tag add -->
+    <link rel="shortcut icon" href="../assets/images/logoIcon/mcl-logo.png" type="image/x-icon">
     <title>MCL | Complaint Create</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link
@@ -40,6 +41,8 @@
         <div class="dot"> </div>
         <div class="dot"></div>
     </div>
+
+
     <!-- Loader ends-->
     <!-- page-wrapper Start-->
     <div class="page-wrapper compact-wrapper" id="pageWrapper">
@@ -80,15 +83,13 @@
                             </li>
                         </ul>
                         <ul class="header-left">
-                            <li class="onhover-dropdown"><a href="index.html"><span
-                                        class="f-w-600">Dashboard</span></a><span><i class="middle"
-                                        data-feather="chevron-down"></i></span>
+                            <li class="onhover-dropdown"><a href="index.html"><span class="f-w-600">Dashboard</span></a>
                             </li>
                             <li class="onhover-dropdown"><span class="f-w-600">Complaint</span><span><i class="middle"
                                         data-feather="chevron-down"></i></span>
                                 <ul class="onhover-show-div left-dropdown">
-                                    <li class="flyout-right"><a href="complaintCreate.html">New Complaint</a>
-                                    </li>
+                                    <!-- <li class="flyout-right"><a href="complaintCreate.html">New Complaint</a>
+                                    </li> -->
                                     <li class="flyout-right"><a href="complaintList.html">Complaint List</a>
                                     </li>
                                 </ul>
@@ -96,110 +97,28 @@
                             <li class="onhover-dropdown"><span class="f-w-600">Manage Users</span><span><i
                                         class="middle" data-feather="chevron-down"></i></span>
                                 <ul class="onhover-show-div left-dropdown">
-                                    <li class="flyout-right"><a href="user.html">Users</a>
+                                    <li class="flyout-right"><a href="user.html">Add Employee</a>
                                     </li>
-                                    <li class="flyout-right"><a href="createNewUser.html">Create New User</a>
+                                    <li class="flyout-right"><a href="callerList.html">Add Caller</a>
+                                    </li>
+                                    <li class="flyout-right"><a href="viewChangeRequests.html">Update Employee
+                                            Request</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="onhover-dropdown"><a href="transfer-level-1-manager.html"><span class="f-w-600">Transfer Level
-                                1 Manager</span></a><span><i class="middle" data-feather="chevron-down"></i></span>
-                          </li>
+                            <li class="onhover-dropdown"><a href="escalated-matrix.html"><span class="f-w-600">Escalated
+                                        Matrix</span></a>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="nav-right col-6 pull-right right-header p-0">
                     <ul class="nav-menus">
                         <li>
-                            <div class="right-header ps-0">
-                                <div class="input-group">
-                                    <div class="input-group-prepend"><span class="input-group-text mobile-search"><i
-                                                class="fa fa-search"></i></span></div>
-                                    <input class="form-control" type="text" placeholder="Search Here..">
-                                </div>
-                            </div>
-                        </li>
-                        <li class="serchinput">
-                            <div class="serchbox"><i data-feather="search"></i></div>
-                            <div class="form-group search-form">
-                                <input type="text" placeholder="Search here...">
-                            </div>
-                        </li>
-                        <li>
                             <div class="mode"><i class="fa fa-moon-o"></i></div>
-                        </li>
-                        <li class="onhover-dropdown">
-                            <div class="notification-box"><i data-feather="bell"></i></div>
-                            <ul class="notification-dropdown onhover-show-div">
-                                <li><i data-feather="bell"> </i>
-                                    <h6 class="f-18 mb-0">Notitications</h6>
-                                </li>
-                                <li>
-                                    <div class="d-flex align-items-center">
-                                        <div class="flex-shrink-0"><i data-feather="truck"></i></div>
-                                        <div class="flex-grow-1">
-                                            <p><a href="order-history.html">Delivery processing </a><span
-                                                    class="pull-right">6 hr</span></p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="d-flex align-items-center">
-                                        <div class="flex-shrink-0"><i data-feather="shopping-cart"></i></div>
-                                        <div class="flex-grow-1">
-                                            <p><a href="cart.html">Order Complete</a><span class="pull-right">3
-                                                    hr</span></p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="d-flex align-items-center">
-                                        <div class="flex-shrink-0"><i data-feather="file-text"></i></div>
-                                        <div class="flex-grow-1">
-                                            <p><a href="invoice-template.html">Tickets Generated</a><span
-                                                    class="pull-right">1 hr</span></p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="d-flex align-items-center">
-                                        <div class="flex-shrink-0"><i data-feather="send"></i></div>
-                                        <div class="flex-grow-1">
-                                            <p><a href="email_inbox.html">Delivery Complete</a><span
-                                                    class="pull-right">45 min</span></p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><a class="btn btn-warning" href="javascript:void(0)">Check all notification</a></li>
-                            </ul>
                         </li>
                         <li class="maximize"><a href="#!" onclick="javascript:toggleFullScreen()"><i
                                     data-feather="maximize-2"></i></a></li>
-                        <li class="language-nav">
-                            <div class="translate_wrapper">
-                                <div class="current_lang">
-                                    <div class="lang"><i data-feather="globe"></i></div>
-                                </div>
-                                <div class="more_lang">
-                                    <div class="lang selected" data-value="en"><i
-                                            class="flag-icon flag-icon-us"></i><span class="lang-txt">English<span>
-                                                (US)</span></span></div>
-                                    <div class="lang" data-value="de"><i class="flag-icon flag-icon-de"></i><span
-                                            class="lang-txt">Deutsch</span></div>
-                                    <div class="lang" data-value="es"><i class="flag-icon flag-icon-es"></i><span
-                                            class="lang-txt">Espa&ntilde;ol</span></div>
-                                    <div class="lang" data-value="fr"><i class="flag-icon flag-icon-fr"></i><span
-                                            class="lang-txt">Fran&ccedil;ais</span></div>
-                                    <div class="lang" data-value="pt"><i class="flag-icon flag-icon-pt"></i><span
-                                            class="lang-txt">Portugu&ecirc;s<span> (BR)</span></span></div>
-                                    <div class="lang" data-value="cn"><i class="flag-icon flag-icon-cn"></i><span
-                                            class="lang-txt">&#x7B80;&#x4F53;&#x4E2D;&#x6587;</span></div>
-                                    <div class="lang" data-value="ae"><i class="flag-icon flag-icon-ae"></i><span
-                                            class="lang-txt">&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629; <span>
-                                                (ae)</span></span></div>
-                                </div>
-                            </div>
-                        </li>
                         <li class="profile-nav onhover-dropdown">
                             <div class="account-user">
                                 <img src="../assets/images/svgImg/user-svgrepo-com.svg" id="imagePreview" alt=""
@@ -207,9 +126,16 @@
                             </div>
                             <ul class="profile-dropdown onhover-show-div">
                                 <li><a href="myprofile.html"><i data-feather="user"></i><span>Account</span></a></li>
-                                <li><a href="changePassword.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lock"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg><span>Change Password</span></a></li>
-                                <li><a href="../index.html"><i data-feather="log-in"> </i><span>Log Out</span></a></li>
-                              </ul>
+                                <li><a href="changePassword.html"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-lock">
+                                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                        </svg><span>Change Password</span></a></li>
+                                <li><a href="../index.html" onclick="logout()"><i data-feather="log-in"> </i><span>Log
+                                            Out</span></a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -271,18 +197,7 @@
                                                 <div class="according-menu"><i class="fa fa-angle-right"></i></div>
                                             </a>
                                             <ul class="sidebar-submenu">
-                                                <li><a class="submenu-title" href="complaintCreate.html">New
-                                                        Complaint<span class="sub-arrow"><i
-                                                                class="fa fa-angle-right"></i></span>
-                                                        <div class="according-menu"><i class="fa fa-angle-right"></i>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li><a class="submenu-title" href="complaintList.html">Complaint
-                                                        List<span class="sub-arrow"><i
-                                                                class="fa fa-angle-right"></i></span>
-                                                        <div class="according-menu"><i class="fa fa-angle-right"></i>
-                                                        </div>
+                                                <li><a class="flyout-right" href="complaintList.html">Complaint List
                                                     </a>
                                                 </li>
                                             </ul>
@@ -300,24 +215,16 @@
                                                 <div class="according-menu"><i class="fa fa-angle-right"></i></div>
                                             </a>
                                             <ul class="sidebar-submenu">
-                                                <li><a class="submenu-title" href="user.html">Users<span
-                                                            class="sub-arrow"><i class="fa fa-angle-right"></i></span>
-                                                        <div class="according-menu"><i class="fa fa-angle-right"></i>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li><a class="submenu-title" href="createNewUser.html">Create New
-                                                        User<span class="sub-arrow"><i
-                                                                class="fa fa-angle-right"></i></span>
-                                                        <div class="according-menu"><i class="fa fa-angle-right"></i>
-                                                        </div>
-                                                    </a>
-                                                </li>
+                                                <li><a class="flyout-right" href="user.html">Add Employee</a></li>
+                                                <li><a class="flyout-right" href="callerList.html">Add Caller</a></li>
+                                                <li class="flyout-right"><a href="viewChangeRequests.html">Update
+                                                        Employee Request</a></li>
                                             </ul>
                                         </li>
-                                        <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="transfer-level-1-manager.html">
-                                            <i data-feather="share-2"></i>
-                                            <span class="">Transfer Level 1 Manager</span></a>
+                                        <li class="sidebar-list"><a class="sidebar-link sidebar-title"
+                                                href="escalated-matrix.html">
+                                                <i data-feather="share-2"></i>
+                                                <span class="">Escalated Matrix</span></a>
                                         </li>
                                     </ul>
                                 </li>
@@ -506,7 +413,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <button class="btn btn-warning" type="button" data-bs-toggle="modal"
+                                        <button class="btn btn-success" type="button" data-bs-toggle="modal"
                                             data-bs-target="#confirmPopup">Submit</button>
                                     </form>
                                 </div>
@@ -514,57 +421,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal fade" id="confirmPopup" data-bs-backdrop="static" data-bs-keyboard="false"
-                    tabindex="-1" aria-labelledby="confirmPopupLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header bg-warning">
-                                <h5 class="modal-title" id="confirmPopupLabel">Send Confirmation Message</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="mb-3 para-confirm mt-3">
-                                    <h5 class="mb-3">Occupant Message :</h5>
-                                    <p>Complaint no. <u class="bg-light-info text-dark py-2 px-1">C/0223/23816</u>
-                                        registered dtd. <u class="bg-light-info text-dark py-2 px-1">24-02-2023</u> QTR
-                                        no. <u class="bg-light-info text-dark py-2 px-1">55</u> Colony <u
-                                            class="bg-light-info text-dark py-2 px-1">03 no. Bokaro area</u> Area <u
-                                            class="bg-light-info text-dark py-2 px-1"> Bokaro-Kargali</u> Complaint
-                                        Category <u class="bg-light-info text-dark py-2 px-1">Steel works</u> From CCL
-                                        Ranchi</p>
-                                </div>
-                                <div class="mb-3 para-confirm">
-                                    <h5 class="mb-3">Overseers & Engineers Message:</h5>
-                                    <p>Complaint no. <u class="bg-light-info text-dark py-2 px-1">C/0223/23816</u>
-                                        registered dtd. <u class="bg-light-info text-dark py-2 px-1">24-02-2023</u> QTR
-                                        no. <u class="bg-light-info text-dark py-2 px-1">55</u> Colony <u
-                                            class="bg-light-info text-dark py-2 px-1">03 no. Bokaro area</u> Area <u
-                                            class="bg-light-info text-dark py-2 px-1"> Bokaro-Kargali</u> EIS/PIS no
-                                        Landmark <u class="bg-light-info text-dark py-2 px-1">test</u> Contact no <u
-                                            class="bg-light-info text-dark py-2 px-1">0000000000</u> Complaint Category
-                                        <u class="bg-light-info text-dark py-2 px-1">Steel works</u> Complaint Details
-                                        <u class="bg-light-info text-dark py-2 px-1">test</u> Department <u
-                                            class="bg-light-info text-dark py-2 px-1">Civil</u> From CCL Ranchi
-                                    </p>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="" class="form-label f-w-700">Overseers</label>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected disabled>No Available</option>
-                                        <option>8759621452 (ANWAR HUSSAIN)</option>
-                                        <option>9658741256 (JOHN)</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="modal-footer d-flex justify-content-between">
-                                <button type="button" class="btn btn-light">Edit</button>
-                                <button type="button" class="btn btn-primary">Send</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Container-fluid Ends-->
             </div>
             <!-- footer start-->
             <footer class="footer">
@@ -577,7 +433,10 @@
                 </div>
             </footer>
         </div>
-    </div>
+    </div> <!-- api call -->
+    <script src="../assets/js/caller/api.js"></script>
+    <!-- data fetch -->
+    <script src="../assets/js/admin/datafetch.js"></script>
     <!-- latest jquery-->
     <script src="../assets/js/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap js-->
@@ -591,10 +450,6 @@
     <!-- Sidebar jquery-->
     <script src="../assets/js/config.js"></script>
     <script src="../assets/js/sidebar-menu.js"></script>
-    <script src="../assets/js/form/form.js"></script>
-    <script src="../assets/js/tooltip-init.js"></script>
-    <!-- Favicon Change -->
-    <script src="../assets/js/dashboard/favicon.js"></script>
     <!-- Template js-->
     <script src="../assets/js/script.js"></script>
 </body>

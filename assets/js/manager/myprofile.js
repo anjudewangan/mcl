@@ -1,0 +1,10 @@
+user = JSON.parse(localStorage.getItem("user"));
+console.log(user);
+document.getElementById("managerName").innerHTML = user.Name;
+document.getElementById("EIS").innerHTML = user.UserID;
+document.getElementById("qr").innerHTML = user.Name;
+document.getElementById("colony").innerHTML = user.Area;
+// document.getElementById("address").innerHTML = user.Area;
+document.getElementById("department").innerText = user.Category;
+document.getElementById("contact").innerHTML = user.Contact;
+// document.getElementById("emailId").innerHTML = user.Email_Id;

@@ -442,7 +442,7 @@
     }
 
     .page-wrapper.compact-wrapper .page-body-wrapper .page-body {
-        margin-top: 81px
+        margin-top: 81px;
     }
 
     .page-wrapper .page-header .header-wrapper {
@@ -1034,7 +1034,7 @@
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
-        background-color: #efbb20;
+        background-color: #0d335b;
         -webkit-transition: all 0.5s ease;
         transition: all 0.5s ease
     }
@@ -1914,8 +1914,8 @@
     }
 
     .page-wrapper .page-header .header-wrapper .nav-right .profile-dropdown.onhover-show-div {
-        top: 50px;
-        width: 160px
+        top: 65px;
+        width: 210px;
     }
 
     .page-wrapper .page-header .header-wrapper .nav-right>ul>li {
@@ -3548,7 +3548,7 @@
     }
 
     .user-profile .profile-header .userpro-box .avatar {
-        margin-top: -50px
+        margin-top: -205px
     }
 
     .page-wrapper.compact-wrapper .page-header .header-wrapper .left-header .left-menu-header .app-menu {

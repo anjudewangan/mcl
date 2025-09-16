@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- meta tag add -->
+    <link rel="shortcut icon" href="../assets/images/logoIcon/mcl-logo.png" type="image/x-icon">
+    <title>MCL | Complaint List</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/font-awesome.css">
+    <!-- Flag icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/flag-icon.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/scrollbar.css">
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/bootstrap.css">
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <!-- Responsive css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/index.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/pagination.css">
+    <!-- Font Awsome  -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- tap on top starts-->
+    <div class="tap-top"><i data-feather="chevrons-up"></i></div>
+    <!-- tap on tap ends-->
+    <!-- Loader starts-->
+    <div class="loader-wrapper">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"> </div>
+        <div class="dot"></div>
+    </div>
+    <!-- Loader ends-->
+    <!-- page-wrapper Start-->
+    <div class="page-wrapper compact-wrapper" id="pageWrapper">
+        <!-- Page Header Start-->
+        <div class="page-header">
+            <div class="header-wrapper row m-0">
+                <form class="form-inline search-full col" action="#" method="get">
+                    <div class="form-group w-100">
+                        <div class="Typeahead Typeahead--twitterUsers">
+                            <div class="u-posRelative">
+                                <input class="demo-input Typeahead-input form-control-plaintext w-100" type="text"
+                                    placeholder="Search .." name="q" title="" autofocus>
+                                <div class="spinner-border Typeahead-spinner" role="status"><span
+                                        class="sr-only">Loading...</span>
+                                </div><i class="close-search" data-feather="x"></i>
+                            </div>
+                            <div class="Typeahead-menu"></div>
+                        </div>
+                    </div>
+                </form>
+                <div class="header-logo-wrapper col-auto p-0">
+                    <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid"> </i>
+                    </div>
+                    <div class="logo-header-main"><a href="index.html"><img class="img-fluid for-light img-100" src=""
+                                alt=""><img class="img-fluid for-dark" src="" alt=""></a></div>
+                </div>
+                <div class="left-header col horizontal-wrapper ps-0">
+                    <div class="left-menu-header">
+                        <ul class="app-list">
+                            <li class="onhover-dropdown">
+                                <div class="app-menu"> <i data-feather="folder-plus"></i></div>
+                                <ul class="onhover-show-div left-dropdown">
+                                    <li> <a href="file-manager.html">File Manager</a></li>
+                                    <li> <a href="kanban.html"> Kanban board</a></li>
+                                    <li> <a href="social-app.html"> Social App</a></li>
+                                    <li> <a href="bookmark.html"> Bookmark</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="header-left">
+                            <li class="onhover-dropdown"><a href="index.html"><span
+                                        class="f-w-600">Dashboard</span></a>
+                            </li>
+                            <li class="onhover-dropdown"><span class="f-w-600">Complaint</span><span><i class="middle"
+                                        data-feather="chevron-down"></i></span>
+                                <ul class="onhover-show-div left-dropdown">
+                                    <li class="flyout-right"><a href="complaintList.html">Complaint List</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="onhover-dropdown"><span class="f-w-600">Technician</span><span><i class="middle"
+                                        data-feather="chevron-down"></i></span>
+                                <ul class="onhover-show-div left-dropdown">
+                                    <li class="flyout-right"><a href="addTechnician.html">Add Technician</a>
+                                    </li>
+                                    <li class="flyout-right"><a href="viewTechnician.html">View Technician</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- <li class="onhover-dropdown"><span class="f-w-600">Reports</span><span><i class="middle"
+                                        data-feather="chevron-down"></i></span>
+                                <ul class="onhover-show-div left-dropdown">
+                                    <li class="flyout-right"><a href="complaintReports.html">Complaint Reports</a>
+                                    </li>
+                                </ul>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav-right col-6 pull-right right-header p-0">
+                    <ul class="nav-menus">
+                        <li>
+                            <div class="mode"><i class="fa fa-moon-o"></i></div>
+                        </li>
+                        <li class="maximize"><a href="#!" onclick="javascript:toggleFullScreen()"><i
+                                    data-feather="maximize-2"></i></a></li>
+                        <li class="profile-nav onhover-dropdown">
+                            <div class="account-user">
+                                <img src="../assets/images/svgImg/user-svgrepo-com.svg" id="imagePreview" alt=""
+                                    width="40px" height="40px">
+                            </div>
+                            <ul class="profile-dropdown onhover-show-div">
+                                <li><a href="myprofile.html"><i data-feather="user"></i><span>Account</span></a></li>
+                                <li><a href="changePassword.html"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-lock">
+                                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                        </svg><span>Change Password</span></a></li>
+                                <li><a href="../index.html" onclick="logout()"><i data-feather="log-in"> </i><span>Log
+                                            Out</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <script class="result-template" type="text/x-handlebars-template">
+            <div class="ProfileCard u-cf">                        
+            <div class="ProfileCard-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay m-0"><path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path><polygon points="12 15 17 21 7 21 12 15"></polygon></svg></div>
+            <div class="ProfileCard-details">
+            <div class="ProfileCard-realName">{{name}}</div>
+            </div>
+            </div>
+          </script>
+                <script class="empty-template"
+                    type="text/x-handlebars-template"><div class="EmptyMessage">Your search turned up 0 results. This most likely means the backend is down, yikes!</div></script>
+            </div>
+        </div>
+        <!-- Page Header Ends-->
+        <!-- Page Body Start-->
+        <div class="page-body-wrapper">
+            <!-- Page Sidebar Start-->
+            <div class="sidebar-wrapper">
+                <div>
+                    <div class="logo-wrapper"><a href="index.html"><img class="img-fluid for-light"
+                                src="../assets/images/logoIcon/mcl-logo.png" alt="">
+                        </a>
+                        <div class="back-btn"><i data-feather="grid"></i></div>
+                        <div class="toggle-sidebar icon-box-sidebar"><i class="status_toggle middle sidebar-toggle"
+                                data-feather="grid"> </i></div>
+                    </div>
+                    <div class="logo-icon-wrapper"><a href="index.html">
+                            <div class="icon-box-sidebar"><i data-feather="grid"></i></div>
+                        </a></div>
+                    <nav class="sidebar-main">
+                        <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
+                        <div id="sidebar-menu">
+                            <ul class="sidebar-links" id="simple-bar">
+                                <li class="back-btn">
+                                    <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2"
+                                            aria-hidden="true"></i></div>
+                                </li>
+                                <li class="menu-box">
+                                    <ul>
+                                        <li class="sidebar-list"><a class="sidebar-link sidebar-title"
+                                                href="index.html"><i data-feather="home"></i><span
+                                                    class="lan-3">Dashboard</span></a>
+                                        </li>
+                                        <li class="sidebar-list"><a class="sidebar-link sidebar-title"
+                                                href="javascript:void(0)"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" class="feather feather-file-text">
+                                                    <path
+                                                        d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z">
+                                                    </path>
+                                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                                    <polyline points="10 9 9 9 8 9"></polyline>
+                                                </svg><span>Complaint</span>
+                                                <div class="according-menu"><i class="fa fa-angle-right"></i></div>
+                                            </a>
+                                            <ul class="sidebar-submenu">
+                                                <li><a class="flyout-right" href="complaintList.html">Complaint
+                                                        List
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="sidebar-list"><a class="sidebar-link sidebar-title"
+                                                href="javascript:void(0)"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" class="feather feather-users">
+                                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                                    <circle cx="9" cy="7" r="4"></circle>
+                                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                                </svg><span>Technician</span>
+                                                <div class="according-menu"><i class="fa fa-angle-right"></i></div>
+                                            </a>
+                                            <ul class="sidebar-submenu">
+                                                <li><a class="flyout-right" href="addTechnician.html">Add
+                                                        Technician
+                                                    </a>
+                                                </li>
+                                                <li><a class="flyout-right" href="viewTechnician.html">View
+                                                        Technician
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
+                    </nav>
+                </div>
+            </div>
+            <!-- Page Sidebar Ends-->
+            <div class="page-body">
+                <div class="container-fluid">
+                    <div class="page-title">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h3>Today's Complaints</h3>
+                            </div>
+                            <div class="col-sm-6">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html"> <i data-feather="home"></i></a>
+                                    </li>
+                                    <li class="breadcrumb-item"> Complaint</li>
+                                    <li class="breadcrumb-item"> Today's Complaints</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Container-fluid starts-->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-header pb-0 mb-4">
+                                    <h5 class="mb-3">Today's Complaints: </h5>
+                                    <form action="" class="mb-4">
+                                        <div class="row g-3 align-items-center">
+                                            <div class="col-lg-3 col-12">
+                                                <select class="form-select" id="progressData" onchange="com_searchBar()"
+                                                    aria-label="Default select example" required="required">
+                                                    <option selected disabled value="">Select Status</option>
+                                                    <option>Open</option>
+                                                    <option>In Progress</option>
+                                                    <option>Complete</option>
+                                                    <option>Close</option>
+                                                    <option>Escalated</option>
+                                                    <option>Re Open</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-lg-3 col-12">
+                                                <input type="date" id="fromDate" class="form-control">
+                                            </div>
+                                            <div class="col-lg-1 col-12 text-center">
+                                                <label for="" class="form-label f-w-700 f-16">To</label>
+                                            </div>
+                                            <div class="col-lg-3 col-12">
+                                                <input type="date" id="toDate" class="form-control">
+                                            </div>
+                                            <div class="col-lg-3 col-12">
+                                                <div class="input-group">
+                                                    <input type="text" id="universalSearch" class="form-control"
+                                                        placeholder="Search" aria-label="Search"
+                                                        aria-describedby="basic-1">
+                                                    <span class="input-group-text" id="basic-addon1">
+                                                        <i class="fa fa-search" onclick="uni_search()"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-body table-responsive p-0 table-wrapper-scroll-y my-custom-scrollbar">
+                                    <table class="table table-hover text-nowrap text-center table-striped">
+                                        <thead class="border-top">
+                                            <tr>
+                                                <th>S No.</th>
+                                                <th class="position-sticky start-0">Complaint No.</th>
+                                                <th>Complaint Date</th>
+                                                <th>Employee Name</th>
+                                                <th>Mobile No.</th>
+                                                <th>EIS No</th>
+                                                <th>Quarter No./Address</th>
+                                                <th>Category</th>
+                                                <th>Work</th>
+                                                <th>Feedback</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="m_complain_list">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div id="data-container"></div>
+                            <div class="paginationjs-theme-blue" id="pagination-container"></div>
+                        </div>
+                    </div>
+                    <!-- Feedback Popup -->
+                    <div class="modal fade" id="feedbackPopup" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="feedbackPopupLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" id="feedback">
+                            <div class="modal-content">
+                                <div class="modal-header bg-primary">
+                                    <h5 class="modal-title" id="feedbackPopupLabel">Complaint Feedbacks</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <table class="table text-center">
+                                        <thead>
+                                            <tr>
+                                                <th>Feedback</th>
+                                                <th>Date</th>
+                                                <!-- <th>Options</th> -->
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="feedback_Manager">
+                                            <!-- <tr>
+                                             <td>CALL NOT PICKUP SMS RECEIVED</td>
+                                             <td>17-02-2023</td>
+                                             <td>Work Completed: Yes</td>
+                                             <td> <span class="text-warning">In Process</span>
+                                             </td>
+                                         </tr> -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Complaint Details Popup -->
+                    <div class="modal fade" id="complaintPopup" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="complaintPopupLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header bg-primary">
+                                    <h5 class="modal-title" id="complaintPopupLabel">Complaint Details</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body mt-3" id="showComplain">
+                                    <!-- <div class="row">
+                                    <div class="col-auto mb-3">
+                                        <p>Complaint no.:
+                                            <u class="bg-light-info text-dark py-2 px-1">C/0223/23668</u>
+                                        </p>
+                                    </div>
+                                    <div class="col-auto mb-3">
+                                        <p>Registered date:
+                                            <u class="bg-light-info text-dark py-2 px-1">17-02-2023</u>
+                                        </p>
+                                    </div>
+                                    <div class="col-auto mb-3">
+                                        <p>Occupant name:
+                                            <u class="bg-light-info text-dark py-2 px-1">PANCHANAND SINGH</u>
+                                        </p>
+                                    </div>
+                                    <div class="col-auto mb-3">
+                                        <p>Contact no :
+                                            <u class="bg-light-info text-dark py-2 px-1">9955366778</u>
+                                        </p>
+                                    </div>
+                                    <div class="col-auto mb-3">
+                                        <p>QTR no.:
+                                            <u class="bg-light-info text-dark py-2 px-1">1B/59</u>
+                                        </p>
+                                    </div>
+                                    <div class="col-auto mb-3">
+                                        <p>Colony :
+                                            <u class="bg-light-info text-dark py-2 px-1">Rajendra Nagar Colony</u>
+                                        </p>
+                                    </div>
+                                    <div class="col-auto mb-3">
+                                        <p>Area:
+                                            <u class="bg-light-info text-dark py-2 px-1">CCL HQ</u>
+                                        </p>
+                                    </div>
+                                    <div class="col-auto mb-3">
+                                        <p>EIS/PIS no :
+                                            <u class="bg-light-info text-dark py-2 px-1">14485270</u>
+                                        </p>
+                                    </div>
+                                    <div class="col-auto mb-3">
+                                        <p>Address(Landmark):
+                                            <u class="bg-light-info text-dark py-2 px-1">K.V SCHOOL</u>
+                                        </p>
+                                    </div>
+                                    <div class="col-auto mb-3">
+                                        <p>Complaint Category:
+                                            <u class="bg-light-info text-dark py-2 px-1">Water supply and Pipe
+                                                Leakage</u>
+                                        </p>
+                                    </div>
+                                    <div class="col-auto mb-3">
+                                        <p>Complaint Details:
+                                            <u class="bg-light-info text-dark py-2 px-1">KITCHEN WATER PIPE LINE
+                                                LEAKAGE</u>
+                                        </p>
+                                    </div>
+                                    <div class="col-auto mb-3">
+                                        <p>Department
+                                            <u class="bg-light-info text-dark py-2 px-1">Civil</u>
+                                        </p>
+                                    </div>
+                                    <div class="col-auto mb-3">
+                                        <p>Status:
+                                            <span class="text-warning">In Process</span>
+                                        </p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="card card-timeline border-none">
+                                            <ul class="bs4-order-tracking">
+                                                <li class="step">
+                                                    <div class="bg-purple mb-1">New</div> <span
+                                                        class="badge-purple">01,Mar,2023</span>
+                                                </li>
+                                                <li class="step">
+                                                    <div class="bg-danger mb-1">Open</div> <span
+                                                        class="text-danger">02,Mar,2023</span>
+                                                </li>
+                                                <li class="step">
+                                                    <div class="bg-warning mb-1">Process</div> <span
+                                                        class="text-warning">03,Mar,2023</span>
+                                                </li>
+                                                <li class="step">
+                                                    <div class="bg-success mb-1">Closed</div> <span
+                                                        class="text-success">04,Mar,2023</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                </div>
+                                <div class="modal-footer d-flex justify-content-between">
+                                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-success">Update Status</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Popup -->
+                    <div class="modal fade" id="technicianPopup" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="technicianPopupLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header bg-primary">
+                                    <h5 class="modal-title" id="technicianPopupLabel">Complaint</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body mb-5">
+                                    <label for="" class="form-label">Select Technician</label>
+                                    <select class="form-select" aria-label="Default select example" onclick="getData()"
+                                        id="userOption">
+                                        <!-- <option selected disabled value="">Select Technician</option>
+                                    <option value="9178946345">Sourav Ku. Parmar</option>
+                                    <option value="9827865418">SARJAN SHANDHA</option> -->
+                                    </select>
+                                </div>
+                                <div class="modal-footer d-flex justify-content-between">
+                                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-success"
+                                        onclick="assTechnician()">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="updateStatusPopup" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="updateStatusPopupLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header bg-primary">
+                                    <h5 class="modal-title" id="updateStatusPopupLabel">Complaint No</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body mb-5">
+                                    <label for="" class="form-label">Select Status</label>
+                                    <select class="form-select" id="progressOption" onchange="progressBar()"
+                                        aria-label="Default select example">
+                                        <option selected disabled value="">Select Status</option>
+                                        <option>Complete</option>
+                                        <option>In Progress</option>
+                                    </select>
+                                    <label for="" class="form-label mt-3">Current Progress</label>
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Enter Current Progress"
+                                            id="floatingTextarea2" style="height: 100px"></textarea>
+                                        <label for="floatingTextarea2">Enter Current Progress</label>
+                                    </div>
+                                </div>
+                                <div class="modal-footer d-flex justify-content-between">
+                                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-success"
+                                        onclick="complainProgress()">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Container-fluid Ends-->
+                </div>
+                <!-- footer start-->
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12 p-0 d-flex justify-content-center">
+                                <p class="mb-0">Copyright © Patio Digital 2023. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!-- api call -->
+        <script src="../assets/js/caller/api.js"></script>
+        <!-- manager data -->
+        <script src="../assets/js/manager/manager_data.js"></script>
+        <!-- latest jquery-->
+        <script src="../assets/js/jquery-3.6.0.min.js"></script>
+        <!-- Bootstrap js-->
+        <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+        <!-- feather icon js-->
+        <script src="../assets/js/icons/feather-icon/feather.min.js"></script>
+        <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
+        <!-- scrollbar js-->
+        <script src="../assets/js/scrollbar/simplebar.js"></script>
+        <script src="../assets/js/scrollbar/custom.js"></script>
+        <!-- Sidebar jquery-->
+        <script src="../assets/js/config.js"></script>
+        <script src="../assets/js/sidebar-menu.js"></script>
+        <!-- Template js-->
+        <script src="../assets/js/script.js"></script>
+        <script src="../assets/js/pagination.min.js"></script>
+
+
+
+        <!-- <script src="../assets/js/manager/mConplainList.js"></script> -->
+        <script src="../assets/js/manager/today'sComplain.js"></script>
+        <!-- <script src="../assets/js/manager/complainList.js"></script> -->
+</body>
+
+</html>

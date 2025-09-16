@@ -41,38 +41,38 @@
                         <div><a class="logo"><img class="img-fluid for-light"
                                     src="./assets/images/logoIcon/mcl-logo.png" alt="loginpage"></a></div>
                         <div class="login-main">
-                            <form class="theme-form">
+                            <form class="theme-form" id="contact-form">
                                 <h4 class="text-center">Contact Us</h4>
                                 <p class="text-center">Say Hello</p>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="col-form-label">Full Name</label>
-                                            <input class="form-control" type="text" name="" required=""
+                                            <input class="form-control" type="text" id="full-name" required=""
                                                 placeholder="John Linken">
                                         </div>
                                         <div class="form-group">
                                             <label class="col-form-label">Phone No.</label>
-                                            <input class="form-control" type="number" required=""
+                                            <input class="form-control" type="number" required="" id="phone-number"
                                                 placeholder="+91 8745210145">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="col-form-label">Email Address</label>
-                                            <input class="form-control" type="email" required=""
+                                            <input class="form-control" type="email" required="" id="email-address" 
                                                 placeholder="Test@gmail.com">
                                         </div>
                                         <div class="form-group">
                                             <label class="col-form-label">Subject</label>
-                                            <input class="form-control" type="text" name="" required=""
+                                            <input class="form-control" type="text" name="" required="" id="subject"
                                                 placeholder="Subject">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="col-form-label">Message</label>
-                                            <textarea class="form-control" id="" rows="3"
+                                            <textarea class="form-control" rows="3" id="message"
                                                 placeholder="Enter message"></textarea>
                                         </div>
                                     </div>
@@ -95,6 +95,8 @@
         <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
         <!-- Template js-->
         <script src="./assets/js/script.js"></script>
+        <script src="./assets/js/caller/api.js"></script>
+        <script src="./assets/js/contact.js"></script>
 </body>
 
 </html>

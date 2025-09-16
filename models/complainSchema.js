@@ -1,0 +1,43 @@
+const mongoose = require('mongoose')
+
+const complainSchema = new mongoose.Schema({
+    Complain_Number: String,
+    Ocupent_Name: String,
+    EIS_No: String,
+    Contact_Number: String,
+    Qr_No: String,
+    Work: String,
+    Colony: String,
+    AREA: String,
+    Active: Boolean,
+    Category: String,
+    Sub_Category: String,
+    Complain: String,
+    Overseers: String,
+    Complaint_Date: Date,
+    Complaint_Time: Date,
+    Technician_Name: String,
+    Technician_Number: String,
+    Inprogress: Array,
+    InprogressDate: [Date],
+    InprogressTime: Array,
+    CompleteDate: [Date],
+    CompleteTime: Array,
+    InprogressRemarks: Array,
+    CompleteRemarks: Array,
+    Completion_of_work: Array,
+    Completed_in_time: Array,
+    Complaint_resolve: Array,
+    Overseers_curstomer_rating: String,
+    Call_customer_rating: String,
+    Queries: Array,
+    Feedback_date: [Date],
+    Message_to_occupent: Boolean,
+    Message_to_Manager: Boolean,
+    jobs: { type: mongoose.Schema.Types.ObjectId, ref: "jobs" },
+    Close_Time: Date,
+    Escalation: { type: Boolean, default: false },
+    Escalation_Level: { type: String, default: "" }
+});
+complainSchema.index({ "$**": "text" });
+module.exports = new mongoose.model("complaint", complainSchema);

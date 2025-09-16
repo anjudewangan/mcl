@@ -2,29 +2,31 @@
 <html lang="en">
 
 <head>
-    <link rel="shortcut icon" href="./assets/images/logoIcon/mcl-logo.png" type="image/x-icon" id="faviconTag">
+    <link rel="shortcut icon" href="./assets/images/logoIcon/mcl-logo.png" type="image/x-icon">
     <title>MCL | Login</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- meta tag add -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./login/css/style.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Login -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="./assets//js/checkSession.js"></script>
+    <script src="./assets/js/checkLogedInUser.js"></script>
 
 </head>
 
 <body>
-    <section class="ftco-section">
+    <!-- <section class="ftco-section">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-5">
                     <div class="login-wrap p-4 p-md-5">
-                        <div class="icon d-flex align-items-center justify-content-center circle-wrapper">
-                            <div class="success">
-                                <img src="./assets/images/logoIcon/mcl-logo.png" alt="" height="90px">
-                            </div>
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <img src="./assets/images/logoIcon/mcl-logo.png" alt="" height="170px">
                         </div>
                         <h3 class="text-center mb-4">Sign In</h3>
                         <form class="login-form">
@@ -48,8 +50,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <button type="submit" id="btnSignIn"
-                                    class="btn rounded submit p-3 px-5">Sign In
+                                <button type="submit" id="btnSignIn" class="btn rounded submit p-3 px-5">Sign In
                                 </button>
                             </div>
                         </form>
@@ -57,8 +58,125 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
+
+    <!-- Header -->
+    <div class="header row">
+        <div class="col-4 d-flex align-items-center justify-content-start">
+            <img src="./assets/images/logoIcon/logo_new.png" alt="MCL Logo" class="mcl-logo">
+        </div>
+        <div class="col-4 d-flex align-items-center justify-content-center">
+            <img src="./assets/images/logoIcon/mcl-logo.png" alt="MCL Logo" class="mcl-logo-new">
+        </div>
+        <div class="col-4 d-flex align-items-center justify-content-end">
+            <button type="submit" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#loginModal">Sign
+                In</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container-fluid">
+
+        <!-- About Smart Township -->
+        <div class="row content-box mt-2">
+            <div class="col-md-8 p-4" style="background-color: #F4F4F4;">
+                <h4 class="section-title fw-bold">Welcome to MCL Smart Township</h4>
+                <p>
+                    Mahanadi Coalfields Limited (MCL), a subsidiary of Coal India Limited, is committed to the
+                    development of modern and sustainable townships for its employees and communities.
+                </p>
+                <h5 class="fw-bold">About Smart Township</h5>
+                <p>
+                    The Smart Township initiative focuses on <b class="text-success">digitization of township
+                        services</b>, including
+                    accommodation management, maintenance requests, employee facilities, and essential citizen services.
+                    This platform ensures transparency, efficiency, and convenience for all MCL stakeholders.
+                </p>
+            </div>
+            <div class="col-md-4">
+                <div class="row mt-3">
+                    <!-- Employee Services -->
+                    <!-- <div class="col-md-6 d-flex">
+                        <div class="card card-custom p-4 h-100 w-100"
+                            style="border-left: 6px solid #198754; background: #f9fffa;">
+                            <h5 class="text-success"><i class="fa fa-user-circle me-2"></i> Employee Services</h5>
+                            <ul class="mt-2">
+                                <li>Leave management</li>
+                                <li>Salary details & payslips</li>
+                                <li>Welfare schemes & benefits</li> 
+                                <li>Internal communication tools</li>
+                            </ul>
+                        </div>
+                    </div> -->
+
+                    <!-- Township Services -->
+                    <div class="col-md-12 d-flex">
+                        <div class="card card-custom p-4 h-100 w-100"
+                            style="border-left: 6px solid #fd7e14; background: #fffaf5;">
+                            <h5 class="text-warning"><i class="fa fa-home me-2"></i> Township Services</h5>
+                            <ul class="mt-2">
+                                <li>Housing requests</li>
+                                <!-- <li>Utility bill & service management</li> -->
+                                <li>Complaint registration</li>
+                                <li>Other civic & community services</li>
+                                <li>Tollfree number: 18008897090</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p class="mb-1">
+            Disclaimer: This portal is meant for official use by MCL employees and township residents only.
+            Unauthorized use is strictly prohibited.
+        </p>
+        <p class="mb-0">
+            <a href="/privacy"><i class="fa fa-shield me-2"></i> Privacy Policy</a> |
+            <a href="/support"><i class="fa fa-life-ring me-2"></i> Support</a> |
+        </p>
+    </div>
+
+
+    <!-- LOGIN MODAL -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-4">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Sign In</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="login-form">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="username" placeholder="Username" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" id="password" placeholder="Password" required>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">Remember Me</label>
+                            </div>
+                            <a href="#">Forgot Password?</a>
+                        </div>
+                        <button type="submit" id="btnSignIn" class="btn btn-custom w-100">Sign In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- api call -->
+    <script src="./assets/js/caller/api.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./login/js/bootstrap.min.js"></script>
     <script src="./login/js/jquery.min.js"></script>
     <script src="./login/js/main.js"></script>
